@@ -12,6 +12,7 @@ function addImageFromFile(file) {
         let output_list = document.getElementById("output_images_ul");
         output_list.innerHTML = ""; // Clear any old results
         detectBoundingBoxes("input_canvas");
+        document.getElementById("output-card").classList.remove("d-none");
     };
 }
 
@@ -53,7 +54,6 @@ function dropHandler(event) {
         }
     }
     document.getElementById("drop-target-visual").classList.remove("border-success");
-    document.getElementById("output-card").classList.remove("d-none");
 }
 
 window.addEventListener("dragenter", WindowDragEnterHandler);
@@ -65,7 +65,7 @@ document.getElementById("drop-target").addEventListener("drop", dropHandler);
 document.getElementById("drop-target").addEventListener("dragover", dragoverHandler);
 
 inputFilePicker.addEventListener("change", (e) => {
-    inputFileName = e.target.files[0].value;
+    inputFileName = e.target.files[0].name;
     addImageFromFile(e.target.files[0]);
 }, false);
 
