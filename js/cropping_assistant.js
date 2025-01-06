@@ -135,7 +135,7 @@ function addOutputImage(index, output_mat) {
         <div class="container-fluid">
             <div class="row">
                 <div class="col">
-                    <canvas id="output_canvas_${index}" class="mt-3 mb-3" style="max-height: 30vh; max-width: 50vh"></canvas>
+                    <canvas id="output_canvas_${index}" class="mt-3 mb-3 mw-100" style="max-height: 30vh;"></canvas>
                     <div class="input-group">
                         <button type="button" class="btn btn-outline-secondary" title="Rotate left" onclick="rotateCanvasIdx(${index}, -90)">
                             <i class="fa-solid fa-rotate-left"></i>
